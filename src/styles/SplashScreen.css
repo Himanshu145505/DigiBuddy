@@ -1,0 +1,156 @@
+/* Splash Screen Styles */
+
+.splash-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #121212, #1e1e1e); /* Dark background */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.splash-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #4caf50; /* Green logo background */
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  color: #4caf50;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.splash-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4caf50; /* Green title */
+}
+
+.splash-tagline {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.splash-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  gap: 1.5rem; /* Space between feature cards */
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px; /* Center grid and limit width */
+}
+
+.feature-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.feature-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.icon-circle.green {
+  background-color: #4caf50; /* Green for Usage Analysis */
+}
+
+.icon-circle.blue {
+  background-color: #2196f3; /* Blue for AI Assistance */
+}
+
+.icon-circle.orange {
+  background-color: #ff9800; /* Orange for Report Generation */
+}
+
+.icon-circle.purple {
+  background-color: #9c27b0; /* Purple for Other */
+}
+
+/* Start Button */
+.start-button {
+  padding: 0.8rem 2rem;
+  background-color: #4caf50; /* Green button */
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  background-color: #45a049;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .splash-title {
+    font-size: 2rem;
+  }
+
+  .splash-tagline {
+    font-size: 0.9rem;
+  }
+
+  .splash-features {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 1rem;
+  }
+
+  .start-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}

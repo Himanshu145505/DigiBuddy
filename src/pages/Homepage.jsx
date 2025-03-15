@@ -22,15 +22,16 @@ const Homepage = () => {
       <div className="ai-recommendations">
         <h2>AI-Powered Insights</h2>
         <p>
-          Today's tip: Minimize your time spent on social media by enabling content filters and using the Pomodoro technique to enhance focus.
+          Today's tip: Minimize your time spent on social media by enabling
+          content filters and using the Pomodoro technique to enhance focus.
         </p>
-
         <p>
-          Today's tip: Minimize your time spent on social media by enabling content filters and using the Pomodoro technique to enhance focus.
+          Today's tip: You've used your phone way too much today! Take a break,
+          or soon your phone will need to charge you instead.
         </p>
-
         <p>
-          Today's tip: Minimize your time spent on social media by enabling content filters and using the Pomodoro technique to enhance focus.
+          Today's tip: Instead of scrolling endlessly, try reading a few pages
+          of a book or taking a short walk.
         </p>
       </div>
 
@@ -54,10 +55,7 @@ const Homepage = () => {
         >
           <h3>Report Generation</h3>
         </div>
-        <div
-          className="feature-card other"
-          onClick={() => navigate("/other")}
-        >
+        <div className="feature-card other" onClick={() => navigate("/other")}>
           <h3>Other</h3>
         </div>
       </div>

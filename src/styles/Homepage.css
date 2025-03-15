@@ -21,6 +21,19 @@
 .homepage-header h1 {
   font-size: 2rem;
 }
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the tips horizontally */
+    text-align: left; /* Ensures all text starts from the same position */
+}
+
+.tips-container p {
+    display: flex;
+    justify-content: flex-start; /* Aligns text to start at the same point */
+    width: 80%; /* Adjust width as needed */
+}
+
 
 .logout-button {
   padding: 0.5rem 1rem;
@@ -85,26 +98,41 @@
 
 /* Feature Colors */
 .usage-analysis {
-  background-color: #4ecdc4 !important;
-  color: #ffffff;
-  height: 120px !important;
+    background-color: #6FCF97 !important;  /* Soft Mint Green */
+    color: #E0F7FA !important;
 }
 
 .ai-assistance {
-  background-color: #e39b83 !important;
-  color: #ffffff;
+    background-color: #76C1E1 !important;  /* Light Cyan Blue */
+    color: #F3E8FF !important;
 }
 
 .report-generation {
-  background-color: #f39c12 !important;
-  color: #ffffff;
-  height: 120px !important;
+    background-color: #F4A261 !important;  /* Muted Peach Orange */
+    color: #5A4825 !important;
 }
 
 .other {
-  background-color: #9b59b6 !important;
-  color: #ffffff;
+    background-color: #A98AC6 !important;  /* Gentle Lavender */
+    color: #E0E0E0 !important;
 }
+
+/* Flashcard Styling */
+.flashcard {
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flashcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
 
 /* Bottom Navigation Section */
 .bottom-navigation {

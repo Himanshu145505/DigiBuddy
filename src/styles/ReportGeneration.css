@@ -1,83 +1,182 @@
-/* Report Generation Page Styles */
-
+/* Report Generation Styles */
 .report-generationmain {
-    padding: 1rem;
-    background: #121212;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0a192f, #000000);
     color: #ffffff;
     font-family: Arial, sans-serif;
-    height: 100vh;
-  }
-  
-  .header {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.report-generationmain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        circle at 10% 10%,
+        rgba(64, 138, 255, 0.07) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 90% 90%,
+        rgba(0, 30, 60, 0.07) 0%,
+        transparent 50%
+      );
+    z-index: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
     text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .header h1 {
-    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #4caf50; /* Green for page title */
-  }
-  
-  .header p {
-    font-size: 1rem;
+    color: #64ffda;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 1.1rem;
     opacity: 0.85;
-  }
-  
-  .generate-section {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.generate-section {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-  }
-  
-  .generate-button {
+}
+
+.generate-button {
     padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #4caf50;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .generate-button:hover {
-    transform: scale(1.05);
-  }
-  
-  .loading {
     font-size: 1.2rem;
-    color: #ff9800; /* Orange for loading state */
-  }
-  
-  .report-section {
+    font-weight: bold;
+    background: #64ffda;
+    border: none;
+    border-radius: 12px;
+    color: #0a192f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.generate-button:hover {
+    background: #4cd7b8;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.loading {
+    font-size: 1.2rem;
+    color: #ffab40;
+}
+
+.report-section {
     margin-top: 2rem;
-  }
-  
-  .report-section h2 {
     text-align: center;
+}
+
+.report-section h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #4caf50;
-  }
-  
-  .report-card {
-    background: #1e1e1e;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .report-card h3 {
-    font-size: 1.2rem;
+    color: #82b1ff;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.report-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background: #82b1ff;
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+    justify-content: center;
+}
+
+.report-card {
+    background: rgba(13, 28, 51, 0.8);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(64, 138, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 255, 255, 0.4);
+}
+
+.report-card h3 {
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
-    color: #2196f3;
-  }
-  
-  .report-card p {
+    color: #64ffda;
+    font-weight: 500;
+}
+
+.report-card p {
     font-size: 1rem;
-    opacity: 0.85;
-  }
-  
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Report Flashcards Section */
+.report-flashcards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 flashcards per row */
+    gap: 1.5rem; /* Reduced gap for a more compact look */
+    margin-top: 2rem;
+    padding: 1rem;
+    justify-items: center;
+}
+
+.flashcard {
+    background: rgba(64, 138, 255, 0.2);
+    padding: 1.5rem; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(64, 138, 255, 0.5);
+    text-align: center;
+    font-size: 1.3rem; /* Slightly smaller text */
+    font-weight: bold;
+    color: #64ffda;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%; /* Slightly reduced width */
+    height: 150px; /* Smaller height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+}

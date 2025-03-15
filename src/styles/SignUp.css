@@ -5,61 +5,95 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #121212, #1e1e1e); /* Black background */
+    background: linear-gradient(135deg, #0a192f, #000000);
     color: #ffffff;
     font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
   }
   
-  .signup-content {
+.signup-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        circle at 10% 10%,
+        rgba(64, 138, 255, 0.07) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 90% 90%,
+        rgba(0, 30, 60, 0.07) 0%,
+        transparent 50%
+      );
+    z-index: 0;
+  }
+  
+.signup-content {
+    position: relative;
     text-align: center;
     width: 90%;
     max-width: 400px;
     padding: 2rem;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent box */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    background: rgba(13, 28, 51, 0.7);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(64, 138, 255, 0.1);
   }
   
-  .signup-content h1 {
+.signup-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #64ffda; /* Greenish tint */
+    font-weight: 600;
   }
   
-  .signup-subtitle {
+.signup-subtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
     opacity: 0.85;
+    font-weight: 300;
   }
   
-  .signup-form {
+.signup-form {
     text-align: left;
   }
   
-  .signup-input {
+.signup-input {
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.8rem;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #121212;
+    border-radius: 8px;
+    background-color: rgba(8, 18, 33, 0.8);
+    color: #ffffff;
+    border: 1px solid rgba(64, 138, 255, 0.1);
   }
   
-  .signup-button {
+.signup-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.3);
+  }
+  
+.signup-button {
     width: 100%;
     padding: 0.8rem;
     font-size: 1rem;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
-    background-color: #4caf50; /* Green button */
-    color: #ffffff;
+    border-radius: 8px;
+    background-color: #64ffda;
+    color: #0a192f;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
   }
   
-  .signup-button:hover {
-    transform: scale(1.05);
+.signup-button:hover {
+    background-color: #4cd7b8;
+    transform: translateY(-2px);
   }
-  

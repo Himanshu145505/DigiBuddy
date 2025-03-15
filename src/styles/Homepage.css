@@ -1,142 +1,141 @@
 /* Homepage Styles */
 
 .homepage {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    overflow-y: auto;
-  }
-  
-  .homepage-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .homepage-header h1 {
-    font-size: 2rem;
-  }
-  
-  .logout-button {
-    padding: 0.5rem 1rem;
-    background-color: #e53935; /* Red logout button */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-  }
-  
-  .logout-button:hover {
-    transform: scale(1.05);
-  }
-  
-  .ai-recommendations {
-    background: #1e1e1e;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
-  
-  .ai-recommendations h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #4caf50; /* Green for AI insights */
-  }
-  
-  .ai-recommendations p {
-    font-size: 1rem;
-    opacity: 0.85;
-  }
-  
-  /* Features Section */
-  .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .feature-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px; /* Adjusted height for proper spacing */
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  .feature-card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Feature Colors */
-  .usage-analysis {
-    background-color: #4caf50 !important;
-    color: #ffffff;
-    height: 120px !important;
-  }
-  
-  .ai-assistance {
-    background-color: #2196f3 !important;
-    color: #ffffff;
-  }
-  
-  .report-generation {
-    background-color: #ff9800 !important;
-    color: #ffffff;
-    height: 120px !important;
-  }
-  
-  .other {
-    background-color: #9c27b0 !important;
-    color: #ffffff;
-  }
-  
-  /* Bottom Navigation Section */
-  .bottom-navigation {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #1e1e1e;
-    padding: 0.8rem 1rem;
-    border-radius: 10px;
-    margin-top: auto;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Elevate the navigation bar */
-  }
-  
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-  
-  .nav-item span {
-    margin-top: 0.3rem;
-    font-size: 0.8rem;
-  }
-  
-  .nav-item:hover {
-    transform: scale(1.1);
-    color: #4caf50; /* Green highlight on hover */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: linear-gradient(135deg, #0a192f, #000000);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.homepage-header h1 {
+  font-size: 2rem;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff5a5f; /* Red logout button */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.logout-button:hover {
+  transform: scale(1.05);
+}
+
+.ai-recommendations {
+  background: #192231;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.ai-recommendations h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #4ecdc4; /* Green for AI insights */
+}
+
+.ai-recommendations p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px; /* Adjusted height for proper spacing */
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Feature Colors */
+.usage-analysis {
+  background-color: #4ecdc4 !important;
+  color: #ffffff;
+  height: 120px !important;
+}
+
+.ai-assistance {
+  background-color: #e39b83 !important;
+  color: #ffffff;
+}
+
+.report-generation {
+  background-color: #f39c12 !important;
+  color: #ffffff;
+  height: 120px !important;
+}
+
+.other {
+  background-color: #9b59b6 !important;
+  color: #ffffff;
+}
+
+/* Bottom Navigation Section */
+.bottom-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #e0e0e0;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin-top: auto;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Elevate the navigation bar */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-item span {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: #4caf50; /* Green highlight on hover */
+}

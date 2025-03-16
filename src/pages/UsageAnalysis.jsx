@@ -1,11 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import "../styles/UsageAnalysis.css";
 
 const UsageAnalysis = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1); // Go back to previous page
+  };
+
   return (
     <div className="usage-analysismain">
       {/* Header Section */}
-      <div className="header">
+      <div className="headerr">
+        <button className="back-button" onClick={handleGoBack}>
+          <FaArrowLeft />
+        </button>
         <h1>Usage Analysis</h1>
       </div>
 
@@ -37,12 +48,10 @@ const UsageAnalysis = () => {
       <div className="charts">
         <div className="chart-card">
           <h3>Usage Trends</h3>
-          {/* Add a placeholder or chart library component */}
           <div className="chart-placeholder">Bar Chart Placeholder</div>
         </div>
         <div className="chart-card">
           <h3>Ads Clicked</h3>
-          {/* Add a placeholder or chart library component */}
           <div className="chart-placeholder">Bar Chart Placeholder</div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 
 const Login = () => {
-  const navigate = useNavigate(); // Hook to handle navigation
+  const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior

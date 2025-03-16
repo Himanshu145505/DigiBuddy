@@ -1,29 +1,33 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Authentication.css";
-import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
+import logo from "../assets/icons/logo.png"; // Replace with your logo path
 
 const Authentication = () => {
-  const navigate = useNavigate(); // Hook to handle navigation
+  const navigate = useNavigate();
 
   return (
     <div className="auth-page">
+      {/* Header Section */}
       <div className="auth-header">
-        <div className="graph-icon">📈</div> {/* Replace this with a graph icon if needed */}
-        <h1>DigiHabit</h1>
+        <img src={logo} alt="DigiBuddy Logo" className="auth-logo" />
+        <h1>Login / Signup</h1>
         <p className="auth-tagline">
           Unveil your digital footprint, decode your habits, and take control of your online behavior.
         </p>
       </div>
+
+      {/* Buttons Section */}
       <div className="auth-buttons">
         <button
           className="auth-button login"
-          onClick={() => navigate("/login")} // Navigate to the login page
+          onClick={() => navigate("/login")}
         >
           Log In
         </button>
         <button
           className="auth-button signup"
-          onClick={() => navigate("/signup")} // Navigate to the signup page
+          onClick={() => navigate("/signup")}
         >
           Sign Up
         </button>

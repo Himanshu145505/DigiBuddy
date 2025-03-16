@@ -1,68 +1,78 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { 
+  FaUserCircle,
+  FaEdit,
+  FaLock,
+  FaQuestionCircle,
+  FaFolder,
+  FaPalette,
+  FaHome,
+  FaCog,
+  FaSignOutAlt
+} from "react-icons/fa";
 import "../styles/Profile.css";
 
 const Profile = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Redirect to login page on logout
     navigate("/login");
   };
 
   return (
     <div className="profile-page">
-      {/* Profile Header Section */}
+      {/* Profile Header */}
       <div className="profile-header">
-        <div className="profile-picture">
-          {/* Placeholder for profile picture */}
-          <span>P</span>
+        <div className="profile-info">
+          <FaUserCircle className="profile-picture" />
+          <h2>Khushi</h2>
+          <p>khushi1845@gmail.com</p>
         </div>
         <button className="logout-button" onClick={handleLogout}>
-          Logout
+          <FaSignOutAlt /> Logout
         </button>
       </div>
 
-      {/* Profile Options */}
-      <div className="profile-options">
+      {/* Profile Options Grid */}
+      <div className="profile-grid">
         <div className="option-card" onClick={() => navigate("/edit-profile")}>
-          ✏️ Edit Profile
+          <FaEdit className="option-icon" />
+          <h3>Edit Profile</h3>
         </div>
-        <div
-          className="option-card"
-          onClick={() => navigate("/privacy-permissions")}
-        >
-          🔒 Privacy & Permissions
+        <div className="option-card" onClick={() => navigate("/privacy-permissions")}>
+          <FaLock className="option-icon" />
+          <h3>Privacy & Permissions</h3>
         </div>
         <div className="option-card" onClick={() => navigate("/help")}>
-          ❓ Help
+          <FaQuestionCircle className="option-icon" />
+          <h3>Help Center</h3>
         </div>
         <div className="option-card" onClick={() => navigate("/data")}>
-          📂 Data Deletion & Export
+          <FaFolder className="option-icon" />
+          <h3>Data Management</h3>
         </div>
-        <div
-          className="option-card"
-          onClick={() => navigate("/theme-customization")}
-        >
-          🎨 Theme & Customization
+        <div className="option-card" onClick={() => navigate("/theme-customization")}>
+          <FaPalette className="option-icon" />
+          <h3>Appearance</h3>
         </div>
       </div>
 
       {/* Bottom Navigation */}
-      <div className="bottom-navigation">
-        <div
-          className="nav-item"
-          onClick={() => navigate("/homepage")}
-        >
-          🏠 <span>Home</span>
+      <nav className="bottom-navigation">
+        <div className="nav-item" onClick={() => navigate("/homepage")}>
+          <FaHome className="nav-icon" />
+          <span>Home</span>
         </div>
-        <div
-          className="nav-item"
-          onClick={() => navigate("/settings")}
-        >
-          ⚙️ <span>Settings</span>
+        <div className="nav-item active" onClick={() => navigate("/profile")}>
+          <FaUserCircle className="nav-icon" />
+          <span>Profile</span>
         </div>
-      </div>
+        <div className="nav-item" onClick={() => navigate("/settings")}>
+          <FaCog className="nav-icon" />
+          <span>Settings</span>
+        </div>
+      </nav>
     </div>
   );
 };

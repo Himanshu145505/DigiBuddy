@@ -1,5 +1,4 @@
 /* Splash Screen Styles */
-
 .splash-screen {
   height: 100vh;
   display: flex;
@@ -10,146 +9,182 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .splash-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, #1a2838, 30%, #0055aa); /* Softer blue glow */
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #1a2838, 30%, #0055aa);
   border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Reduced glow */
-  font-size: 2rem; 
-  color: transparent; 
-  position: relative;
+  margin-bottom: -15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  animation: float 3s ease-in-out infinite;
 }
 
-.splash-logo::before {
-  content: "📈"; 
-  position: absolute;
-  color: white;
-  font-size: 2rem;
+.splash-logo img {
+  width: 250px;
+  height: 250px;
 }
-
 
 .splash-title {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
-  color: #4ecdc4; 
-  text-shadow: 0 0 3px rgba(0, 200, 224, 0.4); /* Softer glow */
+  color: #4ecdc4;
+  text-shadow: 0 0 5px rgba(0, 200, 224, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .splash-tagline {
-  font-size: 1rem;
-  opacity: 0.85;
-  margin-bottom: 1.8rem;
-    color: white;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .splash-features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-  margin-bottom: 1.8rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 950px;
+  animation: slideUp 1.5s ease-in-out;
 }
 
 .feature-card {
   background: linear-gradient(145deg, #1c2541, #2f3e5a);
-  padding: 1rem;
-  border-radius: 8px;
+  /* padding: 1rem; */
+  border-radius: 12px;
+  height: 125px;;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  box-shadow: 0 3px 12px rgba(0, 255, 255, 0.3); /* Reduced brightness */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 .feature-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 18px rgba(0, 255, 255, 0.5); /* Less intense hover effect */
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+}
+
+.feature-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-emoji {
+  transform: scale(1.2);
 }
 
 .feature-card h3 {
-  margin-top: 0.4rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ffffff;
+  margin-top: -10px;
 }
 
-.icon-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 1.3rem;
+.feature-card p {
+  font-size: 0.95rem;
+  color: #d1d1d1;
+  line-height: 1.4;
+  margin-top: 2px;
 }
 
-.icon-circle.blue {
-  background-color: #00c8e0; /* Softer cyan */
-}
-
-.icon-circle.green {
-  background-color: #0dbf6d; /* Less neon green */
-}
-
-.icon-circle.orange {
-  background-color: #e07d00; /* Muted orange */
-}
-
-.icon-circle.purple {
-  background-color: #7600cc; /* Softer purple */
-}
-
-/* Start Button */
 .start-button {
-  padding: 0.9rem 2rem;
+  padding: 1rem 1.5rem;
   background: linear-gradient(90deg, #00c8e0, #0055aa);
   color: #ffffff;
   font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 255, 255, 0.1); /* Very soft, minimal glow */
-  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin-top: -18px;
 }
 
 .start-button:hover {
-  transform: scale(1.08);
-  background: linear-gradient(90deg,#0055aa, #4ecdc4);
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #0055aa, #4ecdc4);
 }
 
+/* Animations and responsive styles remain the same as before */
+
 .arrow {
-  margin-left: 0.4rem;
+  margin-left: 0.5rem;
   font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .splash-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .splash-tagline {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .splash-features {
     grid-template-columns: 1fr;
-    gap: 0.9rem;
+    gap: 1rem;
   }
 
   .start-button {
     font-size: 1rem;
-    padding: 0.7rem 1.6rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .splash-title {
+    font-size: 2rem;
+  }
+
+  .splash-tagline {
+    font-size: 0.9rem;
+  }
+
+  .feature-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.8rem;
   }
 }

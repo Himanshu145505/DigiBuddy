@@ -1,93 +1,127 @@
-/* Settings Page Styles - AI Assistance Theme */
-
+/* Settings.css */
 .settings-page {
-    height: 100vh;
+    padding: 2rem;
     background: linear-gradient(135deg, #0a192f, #000000);
     color: #ffffff;
-    font-family: Arial, sans-serif;
-    padding: 2rem;
-    overflow-y: auto;
-    position: relative;
-}
-
-.settings-page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(
-        circle at 10% 10%,
-        rgba(64, 138, 255, 0.07) 0%,
-        transparent 50%
-    ),
-    radial-gradient(
-        circle at 90% 90%,
-        rgba(0, 30, 60, 0.07) 0%,
-        transparent 50%
-    );
-    z-index: 0;
-}
-
-.settings-title {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+  }
+  
+  .settings-title {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    color: #4ecdc4;
+    text-shadow: 0 0 5px rgba(0, 200, 224, 0.5);
     text-align: center;
-    color: #64ffda; /* Friendly green */
-    font-weight: 600;
-    letter-spacing: 1px;
-    position: relative;
-    z-index: 1;
-}
-
-.settings-section {
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1;
-}
-
-.settings-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #82b1ff; /* Blue for section titles */
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.settings-section h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: #82b1ff;
-    border-radius: 3px;
-}
-
-.settings-option {
-    background: rgba(13, 28, 51, 0.7);
-    padding: 1.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .settings-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .settings-section {
+    background: linear-gradient(145deg, #1c2541, #2f3e5a);
+    padding: 2rem;
     border-radius: 12px;
-    margin-bottom: 0.8rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(64, 138, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  }
+  
+  .settings-section h2 {
+    font-size: 1.5rem;
+    color: #4ecdc4;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .section-icon {
+    font-size: 1.2rem;
+    color: #4ecdc4;
+  }
+  
+  .settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.settings-option:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    color: #64ffda;
-}
-
-.settings-option:last-child {
-    margin-bottom: 0;
-}
+    transition: all 0.3s ease;
+  }
+  
+  .settings-option:hover {
+    background: rgba(78, 205, 196, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  }
+  
+  .settings-option.danger:hover {
+    background: rgba(255, 90, 95, 0.1);
+  }
+  
+  .option-arrow {
+    color: #4ecdc4;
+    font-size: 0.9rem;
+  }
+  
+  .toggle-icon {
+    color: #4ecdc4;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .color-preview {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #4ecdc4;
+  }
+  
+  .danger-icon {
+    color: #ff5a5f;
+  }
+  
+  .version {
+    color: #8b9bb8;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .settings-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .settings-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .settings-page {
+      padding: 1rem;
+    }
+    
+    .settings-section {
+      padding: 1.5rem;
+    }
+    
+    .settings-option {
+      padding: 1rem;
+    }
+  }

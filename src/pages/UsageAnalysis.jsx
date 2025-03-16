@@ -1,13 +1,77 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import { Bar, Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import "../styles/UsageAnalysis.css";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const UsageAnalysis = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1); // Go back to previous page
+    navigate(-1);
+  };
+
+  // Demo data for Usage Trends (Line Chart)
+  const usageTrendsData = {
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+      {
+        label: "Screen Time (hours)",
+        data: [3.2, 4.1, 2.8, 5.3, 4.7, 6.5, 7.1],
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.4,
+        fill: false,
+      },
+    ],
+  };
+
+  // Demo data for Ads Clicked (Bar Chart)
+  const adsClickedData = {
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+      {
+        label: "Ads Clicked",
+        data: [23, 45, 32, 56, 41, 67, 89],
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
+
+  // Chart options
+  const chartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Weekly Overview",
+      },
+    },
+    maintainAspectRatio: false,
   };
 
   return (
@@ -48,11 +112,15 @@ const UsageAnalysis = () => {
       <div className="charts">
         <div className="chart-card">
           <h3>Usage Trends</h3>
-          <div className="chart-placeholder">Bar Chart Placeholder</div>
+          <div className="chart-container">
+            <Line data={usageTrendsData} options={chartOptions} />
+          </div>
         </div>
         <div className="chart-card">
           <h3>Ads Clicked</h3>
-          <div className="chart-placeholder">Bar Chart Placeholder</div>
+          <div className="chart-container">
+            <Bar data={adsClickedData} options={chartOptions} />
+          </div>
         </div>
       </div>
     </div>

@@ -119,6 +119,26 @@
   overflow: hidden;
 }
 
+.chart-container {
+  height: 300px;
+  margin-top: 15px;
+}
+
+.chart-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
 .chart-placeholder::after {
   content: "";
   position: absolute;

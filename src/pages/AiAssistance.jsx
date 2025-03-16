@@ -38,13 +38,10 @@ const AiAssistance = () => {
     // Simulate AI response
     setTimeout(() => {
       const responses = [
-        "I understand your question. Let me help with that.",
-        "That's an interesting query. Here's what I found.",
-        "I'd be happy to assist with that request.",
-        "I'm analyzing that now. Here's my response.",
+        "Hey Khushi! 🌼\n\nFirst off — it’s totally okay to feel demotivated sometimes. It happens to everyone, and honestly, the fact that you’re even trying to figure out why means you’re already on the right track.\n\nSo, I did a little thinking. You mentioned you were super excited this morning, but now you’re feeling low and don’t feel like doing anything. After looking at what you’ve done today — about 2.5 hours of Netflix and 4 hours of Instagram — it seems like what you’re experiencing is a bit of dopamine overstimulation.\n\nWhen you binge on things like social media or streaming, your brain gets quick hits of dopamine — kind of like instant rewards. But the catch is, once your brain gets used to that quick dopamine, doing tasks that give slower rewards (like studying or working) feels way harder. It’s not that you’re lazy — your brain is just craving that instant buzz again.\n\nBut guess what? There’s a fix for this, and we can totally turn it around. 🚀\n\nYou mentioned you need to finish Computer Networks Unit 1 today. Here’s a simple plan using the Pomodoro Technique:\n\n1. Step 1: Put away the distractions — maybe keep your phone in another room or on silent.\n2. Step 2: Set a timer for 25 minutes and study. Think of it like a mini challenge — \"Can I stay focused just for these 25 minutes?\"\n3. Step 3: After that, take a 5-minute break. Scroll a bit, stretch, grab some water — whatever feels good.\n4. Repeat! Do this for about 4 rounds, and then take a longer break (15-20 minutes).\n\nNot only will this help you get stuff done, but it’ll also reset your dopamine levels back to normal. Plus, each 25-minute session feels way less overwhelming, and you get a little reward after each one. 🎉\n\nYou’ve got this, Khushi! It’s okay to have off days, but what matters is picking yourself up and moving forward. I’ll be cheering you on from the sidelines! 🌟",
       ];
       addMessage("ai", responses[Math.floor(Math.random() * responses.length)]);
-    }, 1000);
+    }, 3000);
 
     setInputText("");
   };

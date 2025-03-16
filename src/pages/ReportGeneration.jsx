@@ -1,19 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/ReportGeneration.css";
 
 const ReportGeneration = () => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [reportGenerated, setReportGenerated] = useState(false);
+  const [flashcards, setFlashcards] = useState([]);
+
+  useEffect(() => {
+    const reportTypes = [
+      "Time-Based Reports",
+      "Platform-Based Reports",
+      "Activity-Based Reports",
+      "Productivity & Distraction Analysis",
+      "AI-Powered Insights Report",
+      "Sentiment Analysis Report",
+    ];
+    setFlashcards(reportTypes);
+  }, []);
 
   const handleGenerateReport = () => {
     setIsGenerating(true);
     setReportGenerated(false);
 
-    // Simulate a delay for "processing"
     setTimeout(() => {
       setIsGenerating(false);
       setReportGenerated(true);
-    }, 3000); // 3 seconds delay
+    }, 3000);
   };
 
   return (
@@ -22,7 +34,8 @@ const ReportGeneration = () => {
       <div className="header">
         <h1>Generate Your Complete Report</h1>
         <p>
-          Get insights and trends about your digital habits with a detailed analytical report.
+          Get insights and trends about your digital habits with a detailed
+          analytical report.
         </p>
       </div>
 
@@ -58,6 +71,15 @@ const ReportGeneration = () => {
           </div>
         </div>
       )}
+
+      {/* Flashcards Section */}
+      <div className="report-flashcards">
+        {flashcards.map((report, index) => (
+          <div key={index} className="flashcard">
+            {report}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
